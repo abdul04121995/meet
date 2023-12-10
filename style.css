@@ -163,7 +163,12 @@ button {
   margin-top: 10rem;
   margin-bottom: 5rem;
   justify-content: space-between;
-  margin-inline: 0.5rem;
+  /* margin-inline: 0.5rem; */
+}
+@media screen and (max-width: 768px) {
+  .images {
+    margin-inline: 1rem;
+  }
 }
 .images-container {
   flex: 0 0 calc(25% - ((3 * var(--gap-large)) / 4));
