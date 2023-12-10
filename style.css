@@ -1,0 +1,268 @@
+:root {
+  --dark-blue: #4d96a9;
+  --light-blue: #8fe3f9;
+  --light-blue-half: rgba(77, 151, 169, 0.801);
+  --dark-purple: #855fb1;
+  --light-purple: #d9b8ff;
+  --dark-black: #28283d;
+  --light-black: #87879d;
+  --gap-large: 16px;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Red Hat";
+  src: url(./fonts/RedHatDisplay-Regular.ttf);
+}
+@font-face {
+  font-family: "Red Hat Light";
+  src: url(./fonts/RedHatDisplay-Light.ttf);
+}
+@font-face {
+  font-family: "Red Hat Bold";
+  src: url(./fonts/RedHatDisplay-Bold.ttf);
+}
+body {
+  font-family: "Red Hat";
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+button {
+  all: unset;
+  cursor: pointer;
+}
+.flex {
+  display: flex;
+}
+.container {
+  max-width: 1280px;
+}
+@media screen and (max-width: 1280px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+@media screen and (max-width: 1050px) {
+  .container {
+    max-width: 899px;
+  }
+}
+@media screen and (max-width: 920px) {
+  .container {
+    max-width: 750px;
+  }
+}
+.m-x-auto {
+  margin-inline: auto;
+}
+.text-center {
+  text-align: center;
+}
+/* styling the meet icon section */
+.meet {
+  margin-block: 2rem;
+}
+
+.meet img {
+  margin-inline: auto;
+}
+/* styling hero section */
+.hero {
+  align-items: center;
+  height: 300px;
+  overflow: hidden;
+}
+.hero-left {
+  margin-left: -2rem;
+}
+.hero-right {
+  margin-right: -2rem;
+}
+.hero-middle {
+  padding-inline: 4rem;
+  text-align: center;
+}
+@media screen and (max-width: 1050px) {
+  .hero {
+    flex-wrap: wrap;
+    height: fit-content;
+  }
+  .hero-left,
+  .hero-right {
+    flex: 0 1 50%;
+  }
+  .hero-left img,
+  .hero-right img {
+    margin-inline: auto;
+  }
+  .hero-left {
+    margin-left: 0rem;
+  }
+  .hero-right {
+    margin-right: 0rem;
+  }
+  .hero-middle {
+    padding-inline: 0rem;
+    flex-basis: 100%;
+    order: 1;
+    margin-top: 2rem;
+  }
+}
+.hero-middle__heading {
+  font-size: clamp(2.2rem, 1.5rem + 1.2vw, 4rem);
+  line-height: 1;
+  font-family: "Red Hat Bold";
+}
+.hero-middle__description {
+  margin-block: 01rem;
+  margin-inline: auto;
+  max-width: 80%;
+  word-spacing: 2px;
+  font-family: "Red Hat Light";
+}
+
+/* @media screen and (max-width: ) {
+} */
+/* styling buttons */
+.hero-middle__btns {
+  color: white;
+  font-family: "Red Hat Bold";
+}
+.download {
+  background-color: var(--dark-blue);
+  padding: 0.5rem 1rem;
+  border-radius: 29px;
+  margin-right: 0.5rem;
+  transition: background-color 0.2s ease;
+  font-family: "Red Hat Bold";
+}
+.download:hover {
+  opacity: 0.9;
+}
+.download span {
+  color: var(--light-blue);
+}
+.what {
+  background-color: var(--dark-purple);
+  padding: 0.5rem 1rem;
+  font-family: "Red Hat Bold";
+  border-radius: 29px;
+}
+.what:hover {
+  opacity: 0.9;
+}
+/* styling images section */
+.images {
+  margin-top: 10rem;
+  margin-bottom: 5rem;
+  justify-content: space-between;
+  margin-inline: 0.5rem;
+}
+.images-container {
+  flex: 0 0 calc(25% - ((3 * var(--gap-large)) / 4));
+  border-radius: 9px;
+  overflow: hidden;
+  box-shadow: 0px 1px 11px 2px rgba(0, 0, 0, 0.51);
+  -webkit-box-shadow: 0px 1px 11px 2px rgba(0, 0, 0, 0.51);
+  -moz-box-shadow: 0px 1px 11px 2px rgba(0, 0, 0, 0.51);
+}
+
+@media screen and (max-width: 600px) {
+  .images {
+    flex-wrap: wrap;
+  }
+  .images-container {
+    flex: 0 0 calc(50% - (var(--gap-large) / 2));
+  }
+  .images-container:nth-child(3),
+  .images-container:nth-child(4) {
+    margin-top: 1rem;
+  }
+}
+/* styling message section */
+
+.message {
+  text-align: center;
+}
+.message-title {
+  color: var(--dark-blue);
+  font-family: "Red Hat";
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+.message-heading {
+  margin-block: 1rem;
+  font-family: "Red Hat Bold";
+  font-size: 2.2rem;
+  line-height: 1;
+}
+
+.message-description__inner {
+  max-width: 40%;
+
+  margin-inline: auto;
+}
+@media screen and (max-width: 1050px) {
+  .message-description__inner {
+    max-width: 80%;
+  }
+}
+/* styling footer section */
+
+footer {
+  height: 308px;
+  margin-top: 8rem;
+  background-image: linear-gradient(
+      to right,
+      var(--light-blue-half),
+      var(--light-blue-half)
+    ),
+    url(./assets/desktop/image-footer.jpg);
+
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+  position: relative;
+}
+.ball {
+  position: absolute;
+}
+.footer {
+  height: inherit;
+  align-items: center;
+  justify-content: space-between;
+}
+.row {
+  width: 350px;
+}
+.footer-heading {
+  padding: 1rem 0.5rem 1rem 0;
+  font-size: clamp(2rem, 1rem + 2vw, 3rem);
+  line-height: 1;
+  font-family: "Red Hat";
+}
+.footer-description {
+  padding: 1rem;
+  font-size: 18px;
+}
+@media screen and (max-width: 768px) {
+  .footer {
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .footer-heading {
+    padding-inline: 1rem;
+  }
+  .row {
+    width: 100%;
+  }
+}
